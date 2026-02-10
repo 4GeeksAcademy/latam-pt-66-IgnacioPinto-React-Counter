@@ -8,4 +8,47 @@
     
     import 'relative/path/to/stylesheet.scss';
 
-*/
+    /* Fondo general de la aplicación */
+    
+body {
+    background-color: #282c34; /* Gris oscuro para el fondo de la página */
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+/* Contenedor principal del contador */
+.counter-container {
+    background-color: #101010; /* Negro puro */
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo de cada tarjeta (dígito o icono) */
+.digit-card {
+    background-color: #1e1e1e; /* Gris muy oscuro para las cartas */
+    color: white;
+    font-size: 60px;
+    width: 80px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Ajustes para los controles */
+.controls {
+    text-align: center;
+    color: white;
+}
+.input-group {
+    margin-bottom: 10px;
+}
+
+
