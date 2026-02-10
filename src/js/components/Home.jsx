@@ -1,4 +1,3 @@
-import React from "react";
 import SecondsCounter from "./SecondsCounter";
 
 // El componente Home recibe los segundos y las funciones de control como props
@@ -9,7 +8,7 @@ const Home = ({ seconds, actions }) => {
             {/* Componente del contador */}
             <SecondsCounter seconds={seconds} />
 
-            {/* Controles y Bonus */}
+            {/* Controles*/}
             <div className="controls mt-4 text-light">
                 <div className="row justify-content-center gap-3">
                     
@@ -40,7 +39,7 @@ const Home = ({ seconds, actions }) => {
             </div>
 
             <p className="mt-5 text-light">
-                Made by <a href="https://github.com/4GeeksAcademy/latam-pt-66-IgnacioPinto-React-Counter">Hecho por Ignacio Pinto</a>, with love!
+                Made by <a href="https://github.com/4GeeksAcademy/latam-pt-66-IgnacioPinto-React-Counter">Ignacio Pinto</a>, with love!
             </p>
         </div>
     );

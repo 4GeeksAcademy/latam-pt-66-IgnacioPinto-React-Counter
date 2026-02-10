@@ -1,7 +1,6 @@
-import React from "react";
 
 const Digit = ({ value, isIcon }) => {
-    // Estilos en línea básicos para la tarjeta (o usa CSS externo)
+    // Estilos en línea básicos para la tarjeta
     const cardStyle = {
         backgroundColor: "#1e1e1e",
         color: "white",

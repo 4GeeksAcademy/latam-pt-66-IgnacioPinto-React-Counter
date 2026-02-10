@@ -8,7 +8,7 @@ import "bootstrap"
 // index.css'
 import '../styles/index.css'
 
-// Importamos Home (que ahora incluye dentro a SecondsCounter y Digit)
+// Importamos Home
 import Home from './components/Home';
 
 // --- LÓGICA (Variables Globales) ---
@@ -17,7 +17,7 @@ let isRunning = true;
 let isCountdown = false;
 let alertTime = null;
 
-// --- FUNCIONES DE CONTROL (Se pasarán a Home) ---
+// --- FUNCIONES DE CONTROL (Se pasaran como props a Home) ---
 const actions = {
     stop: () => { isRunning = false },
     resume: () => { isRunning = true },
@@ -27,6 +27,7 @@ const actions = {
         isCountdown = false; 
         alertTime = null;
     },
+
     startCountdown: () => {
         const input = document.getElementById('countdownInput');
         if(input && input.value) {
@@ -36,6 +37,7 @@ const actions = {
             input.value = '';
         }
     },
+
     setAlert: () => {
         const input = document.getElementById('alertInput');
         if(input && input.value) {
@@ -50,7 +52,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // --- BUCLE DE RENDERIZADO ---
 setInterval(() => {
-    // 1. Lógica del tiempo
+    // Lógica del tiempo
     if (isRunning) {
         if (isCountdown) {
             if (seconds > 0) seconds--;
@@ -60,7 +62,7 @@ setInterval(() => {
         }
     }
 
-    // 2. Lógica de Alerta
+    // Lógica de Alerta
     if (alertTime !== null && seconds === alertTime) {
         // Un pequeño timeout para permitir que el renderizado muestre el número antes del alert
         setTimeout(() => {
@@ -69,7 +71,7 @@ setInterval(() => {
         }, 100);
     }
 
-    // 3. Renderizamos Home pasando los props actualizados
+    // Renderizamos Home pasando los props actualizados
     root.render(
         <React.StrictMode>
             <Home seconds={seconds} actions={actions} />
